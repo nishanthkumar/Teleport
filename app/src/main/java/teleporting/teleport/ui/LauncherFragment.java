@@ -1,10 +1,10 @@
 package teleporting.teleport.ui;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -78,11 +78,8 @@ public class LauncherFragment extends Fragment implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.onDemand:
-                Fragment fragment = null;
-                fragment = OnDemandFragment.getInstance();
-                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-                fragmentManager.beginTransaction()
-                        .replace(R.id.frame_container, fragment).commit();
+                Intent intent = new Intent(getActivity(), OnDemandFragment.class);
+                startActivity(intent);
 
                 break;
             case R.id.mediciens_button:

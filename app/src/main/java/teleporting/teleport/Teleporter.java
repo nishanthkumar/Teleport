@@ -12,9 +12,8 @@ import android.support.v7.app.AppCompatActivity;
 import teleporting.teleport.Factory.Factory;
 import teleporting.teleport.Utils.PermissionControl;
 import teleporting.teleport.ui.LauncherFragment;
-import teleporting.teleport.ui.OnDemandFragment;
 
-public class Teleporter extends AppCompatActivity implements OnDemandFragment.OnDemandFragmentInteractionListener, LauncherFragment.OnLauncherFragmentInteractionListener {
+public class Teleporter extends AppCompatActivity implements LauncherFragment.OnLauncherFragmentInteractionListener {
 
     private static final int REQUIRED_PERMISSIONS_REQUEST_CODE = 1;
     private static final long AUTOMATED_RESULT_THRESHOLD_MILLLIS = 250;
@@ -88,11 +87,6 @@ public class Teleporter extends AppCompatActivity implements OnDemandFragment.On
 
     @Override
     public void onLauncherFragmentInteraction(Uri uri) {
-
-    }
-
-    @Override
-    public void onDemandFragmentInteraction(Uri uri) {
 
     }
 }

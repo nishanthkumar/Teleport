@@ -1,0 +1,148 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="teleporting.teleport.ui.ItemSelectionAddition">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <AutoCompleteTextView
+            android:id="@+id/autoCompleteTextView"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_margin="8dp"
+            android:hint="Source"
+            android:textAlignment="center" />
+
+        <AutoCompleteTextView
+            android:id="@+id/autoCompleteTextView2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/source_height"
+            android:layout_margin="8dp"
+            android:hint="Destination"
+            android:textAlignment="center" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <CheckedTextView
+            android:id="@+id/slotIndex1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/button_style"
+            android:padding="8dp"
+            android:text="In 1 Hour"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <CheckedTextView
+            android:id="@+id/slotIndex2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/button_style"
+            android:padding="8dp"
+            android:text="In 3 Hours"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <CheckedTextView
+            android:id="@+id/slotIndex3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/button_style"
+            android:hint="I'll choose Time"
+            android:padding="8dp"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:padding="8dp"
+            android:layout_gravity="start"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="32dp"
+                android:layout_height="wrap_content"
+                android:text="Qty"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/quantity"
+                android:layout_width="48dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_border_edittext"
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="numberSigned" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:layout_weight="0.5"
+            android:layout_gravity="end"
+            android:gravity="end"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="64dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:text="Weight"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/weight"
+                android:layout_width="64dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_border_edittext"
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="numberSigned" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:hint="Additional Notes: eg: fragile product, handle smoothly etc.."
+        android:layout_margin="8dp"
+        android:id="@+id/editText2" />
+
+    <Button
+        android:text="Add to Cart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="48dp"
+        android:textColor="@android:color/white"
+        style="@style/buttonStyle"
+        android:id="@+id/button" />
+</LinearLayout>
